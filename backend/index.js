@@ -32,13 +32,15 @@ async function connectDB() {
 const connectCloudinary = require("./config/cloudinary");
 
 // CORS setup
-app.use(cors({
-    origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true
-}));
-app.options("*", cors());
+// app.use(cors({
+//     origin: "https://e-comm-full-stack-mujw.vercel.app",
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     allowedHeaders: ["Content-Type", "Authorization"],
+//     credentials: true
+// }));
+// app.options("*", cors());
+
+app.use(cors());
 
 // Middleware
 app.use(express.static(path.join(__dirname, "public")));
