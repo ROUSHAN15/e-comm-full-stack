@@ -1,5 +1,5 @@
 export const handlePayment = async (amount) => {
-    const res = await fetch("http://localhost:8080/api/payment/create-order", {
+    const res = await fetch("https://e-comm-full-stack-production.up.railway.app/api/payment/create-order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -17,7 +17,7 @@ export const handlePayment = async (amount) => {
       description: "Purchase from Savitri Jewellers",
       order_id: data.id,
       handler: async (response) => {
-        const verifyRes = await fetch("http://localhost:8080/api/payment/verify", {
+        const verifyRes = await fetch("https://e-comm-full-stack-production.up.railway.app/api/payment/verify", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(response),

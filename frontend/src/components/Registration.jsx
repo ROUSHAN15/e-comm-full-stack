@@ -27,7 +27,7 @@
 
 //     setLoading(true);
 //     try {
-//       const response = await axios.post('http://localhost:8080/api/users/register', {
+//       const response = await axios.post('https://e-comm-full-stack-production.up.railway.app/api/users/register', {
 //         name,
 //         email,
 //         password,
@@ -44,7 +44,7 @@
 //   };
 
 //   const handleGoogleRegister = () => {
-//     window.location.href = 'http://localhost:8080/auth/google';
+//     window.location.href = 'https://e-comm-full-stack-production.up.railway.app/auth/google';
 //   };
 
 //   return (
@@ -167,7 +167,7 @@ const Registration = () => {
 
     setLoading(true);
     try {
-      await axios.post("http://localhost:8080/api/users/register", {
+      await axios.post("https://e-comm-full-stack-production.up.railway.app/api/users/register", {
         name,
         email,
         password,
@@ -184,7 +184,7 @@ const Registration = () => {
   };
 
   const handleGoogleRegister = () => {
-    window.location.href = "http://localhost:8080/auth/google";
+    window.location.href = "https://e-comm-full-stack-production.up.railway.app/auth/google";
   };
 
   return (

@@ -19,7 +19,7 @@ const CartProvider = ({ children }) => {
     if (!userId || !token) return;
 
     try {
-      const response = await axios.get(`http://localhost:8080/api/carts/${userId}`, {
+      const response = await axios.get(`https://e-comm-full-stack-production.up.railway.app/api/carts/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -37,7 +37,7 @@ const CartProvider = ({ children }) => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/carts/add/${userId}`,
+        `https://e-comm-full-stack-production.up.railway.app/api/carts/add/${userId}`,
         { productId, quantity },
         {
           headers: {
@@ -58,7 +58,7 @@ const CartProvider = ({ children }) => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:8080/api/carts/remove/${userId}/${productId}`,
+        `https://e-comm-full-stack-production.up.railway.app/api/carts/remove/${userId}/${productId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

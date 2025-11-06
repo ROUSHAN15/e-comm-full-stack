@@ -61,7 +61,7 @@ const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post("http://localhost:8080/api/users/login", { email, password });
+      const response = await axios.post("https://e-comm-full-stack-production.up.railway.app/api/users/login", { email, password });
       const { token, user } = response.data;
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));

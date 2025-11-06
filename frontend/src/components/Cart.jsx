@@ -15,7 +15,7 @@
 //     const amount = selectedItem.productId.price * quantity * 100; // in paise
 
 //     try {
-//       const res = await fetch("http://localhost:8080/api/payment/create-order", {
+//       const res = await fetch("https://e-comm-full-stack-production.up.railway.app/api/payment/create-order", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify({ amount }),
@@ -134,7 +134,7 @@ const Cart = () => {
     const amount = selectedItem.productId.price * quantity * 100;
 
     try {
-      const res = await fetch("http://localhost:8080/api/payment/create-order", {
+      const res = await fetch("https://e-comm-full-stack-production.up.railway.app/api/payment/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount }),

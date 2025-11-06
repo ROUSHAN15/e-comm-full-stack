@@ -31,7 +31,7 @@ const Product = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/products");
+        const response = await axios.get("https://e-comm-full-stack-production.up.railway.app/api/products");
         setProducts(response.data);
       } catch (err) {
         setError("Failed to load products");
