@@ -7,6 +7,10 @@ const authMiddleware = require("../controllers/authMiddleware");
 
 
 // Register User
+router.get("/health", (req, res) => {
+    res.status(200).json({ status: "ok" });
+});
+
 router.post("/register", async (req, res) => {
     try {
         const { name, email, password, address } = req.body;
